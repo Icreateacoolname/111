@@ -1,0 +1,773 @@
+body {
+    font-family: 'Roboto';
+    font-weight: 900;
+
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+}
+
+/*====================Burger====================*/
+
+#menu__toggle {
+    display: none;
+}
+
+.menu__btn {
+    position: absolute;
+
+    display: none;
+    align-items: center;
+
+    top: 33px;
+    right: 29px;
+
+    width: 23px;
+    height: 15px;
+
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span:before,
+.menu__btn > span:after {
+    position: absolute;
+    content: '';
+
+    width: 23px;
+    height: 2px;
+
+    background: #fff;
+
+    transition-duration: .25s;
+}
+
+.menu__btn > span:before {
+    top: -6px;
+    content: '';
+}
+
+.menu__btn > span:after {
+    top: 6px;
+    content: '';
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span:before {
+    top: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span:after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+#menu__toggle:checked ~ .header__nav_mobile {
+  visibility: visible;
+  right: 0;
+}
+
+
+/*====================Header====================*/
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 70px 10px 0;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+
+    font: 900 18px/21px 'Roboto';
+
+    margin-right: 60px;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.nav__link:hover {
+    background: #FFDA45;
+    color: #000;
+}
+
+
+/*====================intro====================*/
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background: url(img/background.jpg) center no-repeat;
+    background-size: cover;
+
+}
+
+.intro__inner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro__content {
+    position: absolute;
+    display: inline-block;
+
+    text-align: right;
+
+    position: relative;
+
+    padding: 222px 20px 0;
+
+    max-width: 371px;
+
+}
+
+.intro__title {
+    font: 900 40px/46px 'Roboto';
+
+    color: #fff;
+    margin-bottom: 11px;
+}
+
+.intro__subtitle {
+    position: relative;
+    font: 900 20px/23px 'Roboto';
+    color: #fff;
+
+    margin: 0 0 39px 10px;
+}
+
+.btn {
+    border: none;
+    padding: 16px 66px;
+    font: 900 20px/23px 'Roboto';
+    cursor: pointer;
+}
+
+.intro__btn {
+    background: #E0036F;
+    color: #fff;
+}
+
+
+.tickets {
+    padding: 55px 0;
+}
+
+.tickets__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+
+    width: 100%;
+    max-width: 621px;
+}
+
+.tickets__title {
+    text-align: center;
+    font: 500 30px/35px 'Roboto';
+
+    color: #585858;
+
+    margin-bottom: 40px;
+}
+
+.tickets__price {
+    font: 900 30px/35px 'Roboto';
+
+    color: #263B83;
+
+    margin-bottom: 35px;
+}
+
+.tickets__btn {
+    color: #000;
+    background: #FFDA45;
+
+    margin-bottom: 18px;
+
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.tickets__book {
+    color: #585858;
+
+    font: 900 20px/23px 'Roboto';
+    text-decoration: none;
+
+    padding-bottom: 13px;
+
+    border-bottom: 2px solid #FFDA45;
+}
+
+
+.application {
+    width: 100%;
+}
+
+.application__content {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    height: 327px;
+
+    background: #405DBB;
+}
+
+
+.application__info {
+    width: 41%;
+}
+
+.application__title {
+    padding: 118px 246px 20px 130px;
+
+    max-width: 227px;
+    color: #fff;
+
+    font: 900 30px/35px 'Roboto';
+}
+
+.application__subtitle {
+    font: 900 20px/23px 'Roboto';
+    color: #fff;
+
+    padding: 0 43px 0 130px;
+
+    max-width: 430px;
+}
+
+.application__photo {
+    display: inline-block;
+    background: url(img/JPEG%201.jpg) center no-repeat;
+    background-size: cover;
+
+    width: 32%;
+    max-width: 464px;
+    height: 327px;
+}
+
+.application__button {
+    display: block;
+    height: 327px;
+    flex-shrink: 2;
+    padding:  136px 10px 0 43px;
+
+    width: 27%;
+}
+
+.application__btn {
+
+    padding: 17px 30px;
+
+    background: #FFDA45;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.speakers {
+    padding: 90px 0;
+}
+
+.speakers__inner {
+    display: block;
+    justify-content: center;
+}
+
+.speakers__title {
+    display: block;
+    text-align: center;
+    margin: auto;
+
+    font: 500 30px/35px 'Roboto';
+    color: #585858;
+    width: 451px;
+
+    margin-bottom: 70px;
+}
+
+
+.speakers__photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-size: 282px auto;
+}
+
+.speakers__item {
+    position: relative;
+    width: 24%;
+    height: 280px;
+
+    margin: 0 6px 65px 0;
+}
+
+.speaker__items_last {
+    margin-bottom: 0;
+}
+
+
+.footer {
+    height: 250px;
+    background: #0E1E71;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maps {
+    padding-top: 49px;
+}
+
+
+.footer__map {
+    font: 900 18px/21px 'Roboto';
+    text-decoration: none;
+    color: #fff;
+
+
+    margin-left: 7px;
+}
+
+.map__icon {
+    fill: #fff;
+    width: 15px;
+    height: 22px;
+}
+
+.footer__comm {
+    display: flex;
+    align-items: center;
+
+    padding-top: 48px;
+
+}
+
+.tele {
+    margin-right: 18px;
+}
+
+.footer__tel {
+    color: #fff;
+}
+
+.footer__social {
+    display: inline-block;
+}
+
+
+.whatsapp {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+
+    margin-right: 18px;
+}
+
+.telegram {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+}
+
+
+@media (max-width: 990px) {
+
+    .application__title {
+        padding: 40px 10px 20px 60px;
+    }
+
+    .application__subtitle {
+        padding: 0 10px 0 60px;
+    }
+
+    .application__photo {
+        width: 45%;
+    }
+
+    .application__button {
+        padding-left: 15px;
+    }
+
+    .speakers__item {
+        width: 32%;
+    }
+
+    .footer {
+        height: 130px;
+    }
+
+    .footer__comm {
+        padding-right: 20px;
+    }
+}
+
+
+
+@media (max-width: 770px) {
+
+    .container {
+        max-width: 260px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .menu__btn {
+        display: block;
+    }
+
+
+    .header__nav_mobile {
+        display: block;
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 100%;
+        height: 100vh;
+
+        text-align: center;
+        visibility: visible;
+
+        padding: 70px 20px;
+
+        background: rgba(64, 93, 187, .96);
+
+        transition: right .3s linear;
+    }
+
+    .nav__link_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 12px 24px;
+        margin: 0 auto;
+
+        width: 100%;
+        max-width: 400px;
+        height: 120px;
+
+        font: 900 35px/21px 'Roboto';
+    }
+
+    .nav__link:last-child {
+        margin: 0 auto;
+    }
+
+
+    .intro {
+        height: 334px;
+    }
+
+    .intro__inner {
+        justify-content: center;
+    }
+
+    .intro__content {
+        text-align: center;
+        padding: 63px 28px;
+    }
+
+    .intro__title {
+        font: 900 30px/35px 'Roboto';
+        width: 263px;
+    }
+
+    .intro__subtitle {
+        font: 900 15px/17px 'Roboto';
+        margin: 0 0 109px;
+        width: 212px;
+        margin-left: 30px;
+    }
+
+    .btn {
+        font: 900 20px/23px 'Roboto';
+        padding: 14px 105px;
+    }
+
+    .intro__btn {
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    .tickets {
+        padding: 22px 0;
+        height: 295px;
+    }
+
+    .tickets__title {
+        font: 500 20px/23px 'Roboto';
+        max-width: 250px;
+
+
+        text-align: center;
+        margin-bottom: 7px;
+    }
+
+    .tickets__price {
+        margin-bottom: 19px;
+    }
+
+    .tickets__btn {
+        margin-bottom: 28px;
+    }
+
+    .application {
+        width: 100%;
+    }
+
+    .application__content {
+        display: block;
+
+        flex-direction: column;
+        align-items: center;
+        height: 442px;
+
+        background: #405DBB;
+    }
+
+
+    .application__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+    }
+
+    .application__title {
+        margin: 37px 85px 4px;
+
+        padding: 0;
+
+        width: 152px;
+
+        font: 900 20px/23px 'Roboto';
+    }
+
+    .application__subtitle {
+        font: 900 10px/11px 'Roboto';
+
+        margin: 0 53px 21px;
+        padding: 0;
+
+        width: 215px;
+    }
+
+    .application__photo {
+        display: block;
+
+
+        width: 260px;
+        height: 222px;
+        margin: 0 auto;
+    }
+
+    .application__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 116px;
+        flex-shrink: 1;
+        padding: 0;
+        margin: 0;
+
+        width: 100%;
+    }
+
+    .application__btn {
+        margin: 0 auto;
+        width: 260px;
+        padding: 11px 60px;
+        font: 900 20px/23px 'Roboto';
+    }
+
+    .speakers {
+        height: 471px;
+        padding: 33px 0 44px
+    }
+
+    .speakers__inner {
+
+    }
+
+    .speakers__title {
+        font: 500 20px/23px 'Roboto';
+        width: 199px;
+
+        margin-bottom: 28px;
+    }
+
+    .speakers__item {
+        width: 100%;
+        margin: 0;
+        display: none;
+    }
+
+    .footer {
+        height: 92px;
+    }
+
+    .footer__inner {
+
+    }
+
+    .maps {
+         padding-top: 16px;
+    }
+
+    .map__icon {
+        width: 6px;
+        height: 9px;
+    }
+
+    .footer__map {
+        font: 900 8px/9px 'Roboto';
+        margin-left: 3px;
+    }
+
+    .footer__comm {
+        padding: 16px 0 0;
+    }
+
+    .tele {
+        font: 900 8px/9px 'Roboto';
+        margin-right: 7px;
+    }
+
+    .whatsapp {
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .telegram {
+        height: 17px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .nav__link_mobile {
+        padding: 12px 24px;
+        margin: 0 auto;
+
+        width: 100%;
+        max-width: 250px;
+        height: 80px;
+
+        font: 900 18px/17px 'Roboto';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
