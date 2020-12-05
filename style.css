@@ -626,12 +626,27 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .speakers {
-        height: 471px;
-        padding: 33px 0 44px
+        display: none;
     }
 
-    .speakers__inner {
+    .speakers__mob {
+        padding: 34px 0;
+        width: 280px;
+        height: 471px;
 
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    #speakers__str {
+        width: 2240px;
+        transition: all ease 1s;
+        position: relative;
+        left: 0;
+    }
+
+    #speakers__str img {
+        float: left;
     }
 
     .speakers__title {
@@ -641,11 +656,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 28px;
     }
 
-    .speakers__item {
-        width: 100%;
-        margin: 0;
-        display: none;
-    }
 
     .footer {
         height: 92px;
