@@ -305,6 +305,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 90px 0;
 }
 
+.speakers__mob {
+    display: none;
+}
+
 .speakers__inner {
     display: block;
     justify-content: center;
@@ -630,6 +634,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .speakers__mob {
+        display: block;
         padding: 34px 0;
         width: 280px;
         height: 471px;
